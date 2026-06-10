@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.46.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brokerage-inspect"
+version = "0.1.0"
+description = "CLI for inspecting Brazilian brokerage note PDFs."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic==2.13.4",
+    "pypdf==6.13.2",
+    "pyyaml==6.0.3",
+    "rich==15.0.0",
+    "typer==0.26.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.0.3",
+]
+
+[project.scripts]
+brokerage = "brokerage.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
