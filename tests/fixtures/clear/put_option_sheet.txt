@@ -1,0 +1,80 @@
+Negociações
+Negócios realizados
+Q
+Negociação
+C/V
+Tipo mercado
+Prazo
+Especificação do título
+Obs. (*)
+Quantidade
+Preço / Ajuste
+Valor Operação / Ajuste
+D/C
+1-BOVESPA
+V
+OPCAO DE VENDA
+06/26
+ABCDH123 ON
+1,23 ABCD FM
+300
+0,12
+36,00
+C
+NOTA DE NEGOCIAÇÃO
+Nr. nota
+100000002
+Folha
+1
+Data pregão
+08/06/2026
+CLEAR CTVM S/A
+Rua Exemplo, 100
+00000-000
+Cidade - UF
+Internet: https://example.invalid/ SAC: 0000-0000
+C.N.P.J: 00.000.000/0000-00
+Cliente
+99999999
+CLIENTE TESTE
+Rua Cliente, 200
+Tel. (11) 90000-0000
+00000-000 Cidade - UF
+000.000.000-00
+Código cliente
+0-0 99999999
+Assessor
+99999
+Custodiante
+C.I
+N
+P. Vinc
+N
+0,00
+0,00
+0,00
+0,00
+36,00
+0,00
+0,00
+36,00
+Resumo dos Negócios
+35,98
+Total CBLC
+C
+36,00
+Valor líquido das operações
+C
+0,00
+Taxa de liquidação
+0,02
+Taxa de Registro
+0,01
+Total Bovespa / Soma
+D
+0,01
+Emolumentos
+D
+35,97
+Líquido para 10/06/2026
+C

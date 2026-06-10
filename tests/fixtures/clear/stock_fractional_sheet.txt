@@ -1,0 +1,74 @@
+Negociações
+Negócios realizados
+Q
+Negociação
+C/V
+Tipo mercado
+Prazo
+Especificação do título
+Obs. (*)
+Quantidade
+Preço / Ajuste
+Valor Operação / Ajuste
+D/C
+1-BOVESPA
+C
+FRACIONARIO
+ABCD ON
+NM
+22
+4,81
+105,82
+D
+NOTA DE NEGOCIAÇÃO
+Nr. nota
+100000001
+Folha
+1
+Data pregão
+25/07/2025
+CLEAR CTVM S/A
+Rua Exemplo, 100
+00000-000
+Cidade - UF
+Internet: https://example.invalid/ SAC: 0000-0000
+C.N.P.J: 00.000.000/0000-00
+Cliente
+99999999
+CLIENTE TESTE
+Rua Cliente, 200
+Tel. (11) 90000-0000
+00000-000 Cidade - UF
+000.000.000-00
+Código cliente
+0-0 99999999
+Assessor
+99999
+Custodiante
+C.I
+N
+P. Vinc
+N
+0,00
+0,00
+105,82
+0,00
+0,00
+0,00
+0,00
+105,82
+Resumo dos Negócios
+105,84
+Total CBLC
+D
+105,82
+Valor líquido das operações
+D
+0,02
+Taxa de liquidação
+D
+0,00
+Taxa de Registro
+105,84
+Líquido para 29/07/2025
+D

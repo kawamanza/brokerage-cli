@@ -1,0 +1,117 @@
+Negociações
+Negócios realizados
+Q
+Negociação
+C/V
+Tipo mercado
+Prazo
+Especificação do título
+Obs. (*)
+Quantidade
+Preço / Ajuste
+Valor Operação / Ajuste
+D/C
+1-BOVESPA
+C
+EXERC OPC
+VENDA
+05/26
+WXYZQ810E ON
+8,10
+@#
+200
+8,10
+1.620,00
+D
+1-BOVESPA
+C
+OPCAO DE COMPRA
+06/26
+ABCDH19 ON
+1,90 ABCD
+#
+700
+0,06
+42,00
+D
+1-BOVESPA
+C
+OPCAO DE COMPRA
+06/26
+ABCDH19 ON
+1,90 ABCD
+100
+0,06
+6,00
+D
+1-BOVESPA
+C
+OPCAO DE COMPRA
+06/26
+ABCDH19 ON
+1,90 ABCD
+#
+100
+0,06
+6,00
+D
+1-BOVESPA
+C
+OPCAO DE VENDA
+05/26
+ABCDQ150W4 ON
+1,50 ABCDE
+3000
+0,02
+60,00
+D
+NOTA DE NEGOCIAÇÃO
+Nr. nota
+100000003
+Folha
+1
+Data pregão
+15/05/2026
+CLEAR CTVM S/A
+Rua Exemplo, 100
+00000-000
+Cidade - UF
+Internet: https://example.invalid/ SAC: 0000-0000
+C.N.P.J: 00.000.000/0000-00
+Cliente
+99999999
+CLIENTE TESTE
+Rua Cliente, 200
+Tel. (11) 90000-0000
+00000-000 Cidade - UF
+000.000.000-00
+Código cliente
+0-0 99999999
+Assessor
+99999
+Custodiante
+C.I
+N
+P. Vinc
+N
+0,00
+0,00
+0,00
+0,00
+114,00
+0,00
+0,00
+1.734,00
+Resumo dos Negócios
+1.734,00
+Total CBLC
+D
+1.734,00
+Valor líquido das operações
+D
+0,30
+Taxa de liquidação
+D
+1.734,30
+Líquido para 19/05/2026
+D
