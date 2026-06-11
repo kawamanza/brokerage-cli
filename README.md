@@ -1,6 +1,6 @@
 # brokerage
 
-`brokerage` is a CLI for inspecting Brazilian brokerage note PDFs. It currently supports brokerage notes from **Clear** and **CM Capital**, including encrypted PDFs, multi-file batch processing, structured JSON/YAML output, and a human-readable summary view.
+`brokerage` is a CLI for inspecting Brazilian brokerage note PDFs. It currently supports brokerage notes from **Clear**, **CM Capital**, and **Ion Itaú**, including encrypted PDFs, multi-file batch processing, structured JSON/YAML output, and a human-readable summary view.
 
 ## Installation
 
@@ -86,6 +86,22 @@ The CM Capital parser currently extracts and organizes:
 - financial summary values, including IRRF, settlement fee, emoluments, operational fee, registration fee, net operations value, and net settlement.
 
 Supported operation patterns currently include option buy/sell rows observed in CM Capital B3 note layouts. Additional market layouts should be added as broker-specific parser extensions.
+
+## Ion Itaú Parser Capabilities
+
+The Ion Itaú parser currently extracts and organizes:
+
+- source PDF metadata, including page count and whether a password was used;
+- broker metadata available in the note text, identifying the broker as `Ion Itaú` and preserving the legal name when present;
+- customer metadata available in the note text;
+- one or more negotiation notes inside the same PDF;
+- one or more sheets/pages for the same negotiation note;
+- note number, sheet number, trade date, settlement date, note type, and PDF pages used by each note;
+- fractional and spot stock operation rows with fields such as negotiation venue, side, market, title, asset, observation, quantity, price, total, and debit/credit;
+- business summary values from the note;
+- financial summary values, including settlement fee, emoluments, registration fee, net operations value, and net settlement.
+
+Supported operation patterns currently include complete `B3 RV LISTADO` stock rows from the Ion Itaú B3 brokerage-note layout. Additional Ion Itaú markets should be added as broker-specific parser extensions.
 
 ## Output Modes
 

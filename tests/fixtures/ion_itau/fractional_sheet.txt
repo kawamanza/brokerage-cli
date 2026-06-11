@@ -1,0 +1,25 @@
+NOTA DE CORRETAGEM
+Itaú Corretora de Valores S/A
+Av. Teste, 100
+Cidade UF
+C.N.P.J.: 00.000.000/0001-00
+Internet: www.ion.itau.example
+SAC: 0800-0000
+Ouvidoria: 0800-1111
+Nr. Nota Folha Data Pregão
+800001 1 02/06/2026
+Cliente
+CLIENTE TESTE
+C.P.F./C.N.P.J./C.V.M./C.O.B.
+000.000.000-00
+Código Cliente
+999999-1
+Assessor
+77
+Negócios Realizados
+B3 RV LISTADO C FRACIONARIO BRASIL ON EJ 10 12,34 123,40 D
+B3 RV LISTADO V FRACIONARIO ACME PN 5 20,00 100,00 C
+Resumo de Negócios
+Debêntures 0,00 Vendas à vista 100,00 Compras à vista 123,40 Opções - Compras 0,00 Opções - Vendas 0,00 Operações à termo 0,00 Valor das oper. c/ títulos públ. 0,00 Valor das operações 223,40
+Resumo Financeiro
+Valor líquido das operações 23,40 D Taxa de liquidação/CCP 0,05 D Taxa de registro 0,03 D Taxa de termo/opções 0,00 D Emolumentos 0,02 D Taxa de transferência 0,00 D Clearing 0,00 D Execução 0,00 D ISS 0,00 D Outras despesas 0,00 D Líquido para 04/06/2026 23,50 D
