@@ -8,8 +8,8 @@ from brokerage.models import BatchResult, BrokerageFile, NegotiationNote, Operat
 
 Money = Decimal
 _TITLE_SUFFIX_MARKERS = {"ON", "PN", "UNT", "CI", "NM", "N1", "N2", "MA", "MB", "EJ", "@", "#"}
-_FINANCIAL_FIELDS = ("irrf", "settlement_fee", "emoluments", "operational_fee", "registration_fee")
-_ALLOCATED_COST_FIELDS = ("settlement_fee", "emoluments", "operational_fee", "registration_fee")
+_FINANCIAL_FIELDS = ("irrf", "settlement_fee", "emoluments", "operational_fee", "registration_fee", "transfer_fee")
+_ALLOCATED_COST_FIELDS = ("settlement_fee", "emoluments", "operational_fee", "registration_fee", "transfer_fee")
 _CENTS = Decimal("0.01")
 _BATCH_SEPARATOR = "-" * 40
 

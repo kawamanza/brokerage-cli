@@ -67,5 +67,5 @@ def test_nu_invest_parser_extracts_summaries_and_summary_output():
 
     summary = summarize_payload(parsed)
     assert "Broker: Nu Investimentos" in summary
-    assert "Financial: irrf=$0.01 | settlement_fee=$0.03 | emoluments=$0.02 | operational_fee=$0.00 | registration_fee=$0.01 | allocated_costs=$0.06" in summary
+    assert "Financial: irrf=$0.01 | settlement_fee=$0.03 | emoluments=$0.02 | operational_fee=$0.00 | registration_fee=$0.01 | transfer_fee=$0.00 | allocated_costs=$0.06" in summary
     assert 'TEST11 | $123.40 / 10 = $12.34 (1 operations, side=sell, market="VISTA", dc=credit, allocated_costs=$0.06)' in summary

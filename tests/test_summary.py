@@ -25,7 +25,7 @@ def test_summary_groups_operations_by_note_and_asset():
     assert 'File: "sample.pdf"' in summary
     assert "Pages: 1 | Notes: 1 | Operations: 5" in summary
     assert "Note 100000003 | type=options | trade_date=15/05/2026 | settlement_date=19/05/2026 | sheets=1 | pages=1" in summary
-    assert "Financial: irrf=$0.00 | settlement_fee=$0.30 | emoluments=$0.00 | operational_fee=$0.00 | registration_fee=$0.00 | allocated_costs=$0.30" in summary
+    assert "Financial: irrf=$0.00 | settlement_fee=$0.30 | emoluments=$0.00 | operational_fee=$0.00 | registration_fee=$0.00 | transfer_fee=$0.00 | allocated_costs=$0.30" in summary
     assert 'ABCDH19 | $54.00 / 900 = $0.06 (3 operations, side=buy, market="OPCAO DE COMPRA", dc=debit, allocated_costs=$0.01, strike=$1.90)' in summary
     assert 'ABCDQ150W4 | $60.00 / 3000 = $0.02 (1 operations, side=buy, market="OPCAO DE VENDA", dc=debit, allocated_costs=$0.01, strike=$1.50)' in summary
     assert 'WXYZQ810E | $1620.00 / 200 = $8.10 (1 operations, side=buy, market="EXERC OPC", dc=debit, allocated_costs=$0.28)' in summary
@@ -112,5 +112,31 @@ def test_summary_supports_cm_capital_option_strike_and_costs():
     summary = summarize_payload(parsed)
 
     assert "Broker: CM Capital" in summary
-    assert "Financial: irrf=$0.00 | settlement_fee=$0.01 | emoluments=$0.02 | operational_fee=$0.00 | registration_fee=$0.04 | allocated_costs=$0.07" in summary
+    assert "Financial: irrf=$0.00 | settlement_fee=$0.01 | emoluments=$0.02 | operational_fee=$0.00 | registration_fee=$0.04 | transfer_fee=$0.00 | allocated_costs=$0.07" in summary
     assert 'ABCDO879 | $60.00 / 500 = $0.12 (1 operations, side=sell, market="OPCAO DE VENDA", dc=credit, allocated_costs=$0.07, strike=$8.37)' in summary
+
+
+def test_summary_allocates_transfer_fee_by_asset_total():
+    parsed = BrokerageFile(
+        broker=BrokerInfo(name="Test Broker"),
+        source_file="sample.pdf",
+        pages=1,
+        notes=[
+            NegotiationNote(
+                number="1",
+                sheet_count=1,
+                pdf_pages=[1],
+                financial_summary={"settlement_fee": Decimal("0.01"), "transfer_fee": Decimal("0.09")},
+                operations=[
+                    Operation(raw="", asset="AAA", title="AAA ON", quantity=Decimal("1"), total=Decimal("70"), side="buy", market="VISTA", debit_credit="debit"),
+                    Operation(raw="", asset="BBB", title="BBB ON", quantity=Decimal("1"), total=Decimal("30"), side="buy", market="VISTA", debit_credit="debit"),
+                ],
+            )
+        ],
+    )
+
+    summary = summarize_payload(parsed)
+
+    assert "Financial: irrf=$0.00 | settlement_fee=$0.01 | emoluments=$0.00 | operational_fee=$0.00 | registration_fee=$0.00 | transfer_fee=$0.09 | allocated_costs=$0.10" in summary
+    assert 'AAA | $70.00 / 1 = $70.00 (1 operations, side=buy, market="VISTA", dc=debit, allocated_costs=$0.07)' in summary
+    assert 'BBB | $30.00 / 1 = $30.00 (1 operations, side=buy, market="VISTA", dc=debit, allocated_costs=$0.03)' in summary

@@ -101,6 +101,6 @@ def test_ion_itau_summary_groups_by_note_and_asset_with_allocated_costs():
 
     assert "Broker: Ion Itaú" in summary
     assert "Note 800001 | type=stocks | trade_date=02/06/2026 | settlement_date=04/06/2026 | sheets=1 | pages=1" in summary
-    assert "Financial: irrf=$0.00 | settlement_fee=$0.05 | emoluments=$0.02 | operational_fee=$0.00 | registration_fee=$0.03 | allocated_costs=$0.10" in summary
+    assert "Financial: irrf=$0.00 | settlement_fee=$0.05 | emoluments=$0.02 | operational_fee=$0.00 | registration_fee=$0.03 | transfer_fee=$0.00 | allocated_costs=$0.10" in summary
     assert 'ACME | $100.00 / 5 = $20.00 (1 operations, side=sell, market="FRACIONARIO", dc=credit, allocated_costs=$0.04)' in summary
     assert 'BRASIL | $123.40 / 10 = $12.34 (1 operations, side=buy, market="FRACIONARIO", dc=debit, allocated_costs=$0.06)' in summary
