@@ -2,6 +2,23 @@
 
 `brokerage` is a CLI for inspecting Brazilian brokerage note PDFs. It currently supports brokerage notes from **Clear**, **CM Capital**, **Ion Itaú**, **Nu Investimentos**, and the generic **SINACOR** B3 note model, including encrypted PDFs, multi-file batch processing, structured JSON/YAML output, and a human-readable summary view.
 
+## Intended Use
+
+This project is selfware: it was built to solve a personal workflow for standardizing the reading of brokerage notes for personal investment control.
+
+Its main goals are:
+
+- reading brokerage note PDFs into a consistent local structure;
+- helping reconcile personal investment records;
+- supporting average-price tracking;
+- allocating note-level fees and costs across assets from the same note, to support more accurate personal average-price adjustments.
+
+This CLI is not official software from any brokerage, exchange, tax authority, regulator, or financial institution. It is not tax, accounting, investment, legal, or financial advice.
+
+Use extra care before relying on this project in official, regulated, professional, or commercial contexts. Parser output is best-effort and must be checked against the original brokerage note and any applicable official records before being used in tax filings, accounting books, investment decisions, customer-facing services, or paid products.
+
+Commercial use, hosted services, official tax/accounting/financial products, resale, sublicensing, or professional advisory workflows require prior permission under the project license.
+
 ## Installation
 
 This project uses Pipenv and pinned dependency versions.
@@ -146,9 +163,15 @@ Use `--summary` for a readable text report. The summary:
 - displays totals as `<asset> | $<sum_total> / <sum_quantity> = $<avg_price>`;
 - includes operation count, side, market, debit/credit, allocated costs, and option strike when parsed;
 - shows note-level financial fields;
-- allocates settlement fee, emoluments, operational fee, and registration fee proportionally by each asset's traded total;
+- allocates settlement fee, emoluments, operational fee, registration fee, and transfer fee proportionally by each asset's traded total;
 - assigns any rounding remainder to the asset with the largest traded total;
 - separates files in `batch --summary` with a 40-character divider.
+
+## License
+
+This project is distributed under the [Brokerage CLI Selfware Non-Commercial License](LICENSE.md).
+
+In short: personal, educational, research, and internal non-commercial use are allowed; commercial use and official/professional financial, tax, accounting, or advisory use require prior written permission. The license also disclaims warranties and responsibility for parser accuracy, financial losses, tax penalties, or regulatory suitability.
 
 ## Development Notes
 
