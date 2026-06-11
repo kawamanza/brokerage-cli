@@ -22,7 +22,7 @@ class ClearParser:
 
     def matches(self, text: str) -> bool:
         normalized = text.upper()
-        return "CLEAR" in normalized or "CLEAR CTVM" in normalized or "CLEAR CORRETORA" in normalized
+        return "CLEAR CTVM" in normalized or "CLEAR CORRETORA" in normalized
 
     def parse(self, extracted: ExtractedPdf) -> BrokerageFile:
         page_texts = extracted.page_texts or extracted.text.split("\f") or [extracted.text]

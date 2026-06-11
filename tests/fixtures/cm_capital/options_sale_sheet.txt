@@ -1,0 +1,41 @@
+NOTA DE CORRETAGEM
+Nr. Nota Folha Pregão
+900001 1 20/03/2026
+CM CAPITAL MARKETS CCTVM LTDA
+RUA TESTE, 100
+CIDADE TESTE - UF
+CEP 00000-000
+C.N.P.J.: 00.000.000/0001-00
+Cliente
+CLIENTE TESTE
+C.P.F./C.N.P.J./C.V.M./C.O.B.
+000.000.000-00
+Código Cliente Assessor
+88-4 999999-1 80
+Negócios Realizados
+Q Bolsa C/V Tipo Mercado Prazo Especificação do título Obs.(*) Quantidade Preço Valor Operação/Ajuste D/C
+BOVESPA V OPÇÃO DE VENDA 03/26 ABCDO879 ON 8,37 ABCDE 500 0,12 60,00 C
+Resumo dos Negócios
+Debêntures 0,00
+Vendas à vista 0,00
+Compras à vista 0,00
+Opções - Compras 0,00
+Opções - Vendas 60,00
+Operações à termo 0,00
+Valor das oper. c/ títulos públ. (v. nom.) 0,00
+Valor das operações 60,00
+Resumo Financeiro D/C
+Clearing
+Valor líquido das operações 60,00 C
+Taxa de liquidação/CCP 0,01 D
+Taxa de registro 0,04 D
+Taxa de termo/opções 0,00 D
+Taxa A.N.A. 0,00 D
+Emolumentos 0,02 D
+Taxa Operacional 0,00 D
+Execução 0,00 D
+Taxa de Custódia 0,00 D
+Impostos 0,00 D
+IR S/ Operações 0,00 D
+Outros 0,00 D
+Líquido para 23/03/2026 59,93 C

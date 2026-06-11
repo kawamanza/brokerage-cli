@@ -2,6 +2,7 @@ from decimal import Decimal
 from pathlib import Path
 
 from brokerage.brokers.clear import ClearParser
+from brokerage.brokers.cm_capital import CmCapitalParser
 from brokerage.models import BatchResult, BrokerageFile, BrokerInfo, ExtractedPdf, NegotiationNote, Operation
 from brokerage.summary import summarize_payload
 
@@ -100,3 +101,16 @@ def test_summary_assigns_rounding_remainder_to_largest_asset():
     assert 'AAA | $11.00 / 1 = $11.00 (1 operations, side=buy, market="VISTA", dc=debit, allocated_costs=$0.02)' in summary
     assert 'BBB | $10.00 / 1 = $10.00 (1 operations, side=buy, market="VISTA", dc=debit, allocated_costs=$0.01)' in summary
     assert 'CCC | $10.00 / 1 = $10.00 (1 operations, side=buy, market="VISTA", dc=debit, allocated_costs=$0.01)' in summary
+
+
+def test_summary_supports_cm_capital_option_strike_and_costs():
+    sheet = (Path(__file__).parent / "fixtures" / "cm_capital" / "options_sale_sheet.txt").read_text()
+    parsed = CmCapitalParser().parse(
+        ExtractedPdf(source_file=Path("sample.pdf"), text=sheet, pages=1, page_texts=[sheet])
+    )
+
+    summary = summarize_payload(parsed)
+
+    assert "Broker: CM Capital" in summary
+    assert "Financial: irrf=$0.00 | settlement_fee=$0.01 | emoluments=$0.02 | operational_fee=$0.00 | registration_fee=$0.04 | allocated_costs=$0.07" in summary
+    assert 'ABCDO879 | $60.00 / 500 = $0.12 (1 operations, side=sell, market="OPCAO DE VENDA", dc=credit, allocated_costs=$0.07, strike=$8.37)' in summary

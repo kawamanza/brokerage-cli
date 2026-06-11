@@ -1,6 +1,6 @@
 # brokerage
 
-`brokerage` is a CLI for inspecting Brazilian brokerage note PDFs. It currently supports brokerage notes from **Clear**, including encrypted PDFs, multi-file batch processing, structured JSON/YAML output, and a human-readable summary view.
+`brokerage` is a CLI for inspecting Brazilian brokerage note PDFs. It currently supports brokerage notes from **Clear** and **CM Capital**, including encrypted PDFs, multi-file batch processing, structured JSON/YAML output, and a human-readable summary view.
 
 ## Installation
 
@@ -70,6 +70,22 @@ The Clear parser currently extracts and organizes:
 - financial summary values, including IRRF, settlement fee, emoluments, operational fee, registration fee, and related totals.
 
 Supported operation patterns include spot/fractional trades, ETFs, options, and option exercise rows observed in Clear note layouts.
+
+## CM Capital Parser Capabilities
+
+The CM Capital parser currently extracts and organizes:
+
+- source PDF metadata, including page count and whether a password was used;
+- broker metadata available in the note text;
+- customer metadata available in the note text;
+- one or more negotiation notes inside the same PDF;
+- one or more sheets/pages for the same negotiation note;
+- note number, sheet number, trade date, settlement date, note type, and PDF pages used by each note;
+- option operation rows with fields such as negotiation venue, side, market, term, title, asset, observation, quantity, price, total, debit/credit, and strike when available;
+- business summary values from the note;
+- financial summary values, including IRRF, settlement fee, emoluments, operational fee, registration fee, net operations value, and net settlement.
+
+Supported operation patterns currently include option buy/sell rows observed in CM Capital B3 note layouts. Additional market layouts should be added as broker-specific parser extensions.
 
 ## Output Modes
 

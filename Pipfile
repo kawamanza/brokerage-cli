@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 brokerage-inspect = {editable = true, path = "."}
+cryptography = "==48.0.1"
 
 [dev-packages]
 pytest = "==9.0.3"
