@@ -1,0 +1,46 @@
+NOTA DE NEGOCIAÇÃO
+Nr. Nota Folha Data pregão
+900001 1 31/03/2026
+NU INVESTIMENTOS S.A - CTVM
+Rua Teste, nº 100, 2º andar, conjunto 200 - Pinheiros
+00000-000 - São Paulo - SP - BR
+Internet: https://nubank.example/investimentos
+C.N.P.J.: 00.000.000/0001-00 Carta Patente: A-000/00
+Ouvidoria: Tel. 0800-000-000
+Cliente
+999 - 1 CLIENTE TESTE
+Rua Cliente Teste 123
+00000-000 - SÃO PAULO - SP
+C.P.F./C.N.P.J./C.V.M./C.O.B.
+000.000.000-00
+Código cliente Assessor
+999 - 1 80
+Negocios realizados
+Q Negociação C/V Tipo mercado Prazo Especificação do título Obs. (*) Quantidade Preço / Ajuste Valor Operação / Ajuste D/C
+B3 RV LISTADO V VISTA FII TESTE CI @ 10 1234 12340 C
+Resumo dos Negócios Resumo Financeiro D/C
+Debêntures 0
+Vendas à vista 12340
+Compras à vista 0
+Opções - compras 0
+Opções - vendas 0
+Operações à termo 0
+Valor das oper. c/ títulos públ. (v. nom.) 0
+Valor das operações 12340
+Clearing
+Valor líquido das operações 12340 C
+Taxa de liquidação/CCP 3 D
+Taxa de Registro 1 D
+Bolsa
+Taxa de termo/opções 0 D
+Taxa A.N.A. 0 D
+Emolumentos 2 D
+Depositária
+Taxa de Transferência de Ativos 0 D
+Corretagem / Despesas
+Clearing 0 D
+Execução 0 D
+ISS ( SÃO PAULO ) 0
+Outras 0 D
+Líquido para 02/04/2026 12334 C
+NU INVESTIMENTOS S.A - CTVM

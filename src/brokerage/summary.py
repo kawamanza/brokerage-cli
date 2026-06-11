@@ -33,13 +33,19 @@ def summarize_batch(result: BatchResult) -> str:
 def summarize_file(parsed_file: BrokerageFile) -> str:
     lines = [
         f'File: "{parsed_file.source_file}"',
-        f"Broker: {parsed_file.broker.name}",
+        f"Broker: {_broker_label(parsed_file)}",
         f"Pages: {parsed_file.pages} | Notes: {len(parsed_file.notes)} | Operations: {sum(len(note.operations) for note in parsed_file.notes)}",
     ]
 
     for note in parsed_file.notes:
         lines.extend(["", *summarize_note(note)])
     return "\n".join(lines)
+
+
+def _broker_label(parsed_file: BrokerageFile) -> str:
+    if parsed_file.broker.name == "SINACOR" and parsed_file.broker.legal_name:
+        return f"SINACOR ({parsed_file.broker.legal_name})"
+    return parsed_file.broker.name
 
 
 def summarize_note(note: NegotiationNote) -> list[str]:
@@ -129,6 +135,8 @@ def _financial_value(note: NegotiationNote, field: str) -> Decimal:
 
 
 def _asset_label(operation: Operation) -> str:
+    if operation.asset and operation.asset.startswith("FII "):
+        return operation.asset
     if _looks_like_option_code(operation.asset):
         return operation.asset or "<unknown>"
     title_label = _title_label(operation.title)

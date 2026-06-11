@@ -1,6 +1,6 @@
 # brokerage
 
-`brokerage` is a CLI for inspecting Brazilian brokerage note PDFs. It currently supports brokerage notes from **Clear**, **CM Capital**, and **Ion Itaú**, including encrypted PDFs, multi-file batch processing, structured JSON/YAML output, and a human-readable summary view.
+`brokerage` is a CLI for inspecting Brazilian brokerage note PDFs. It currently supports brokerage notes from **Clear**, **CM Capital**, **Ion Itaú**, **Nu Investimentos**, and the generic **SINACOR** B3 note model, including encrypted PDFs, multi-file batch processing, structured JSON/YAML output, and a human-readable summary view.
 
 ## Installation
 
@@ -102,6 +102,31 @@ The Ion Itaú parser currently extracts and organizes:
 - financial summary values, including settlement fee, emoluments, registration fee, net operations value, and net settlement.
 
 Supported operation patterns currently include complete `B3 RV LISTADO` stock rows from the Ion Itaú B3 brokerage-note layout. Additional Ion Itaú markets should be added as broker-specific parser extensions.
+
+## Nu Investimentos Parser Capabilities
+
+The Nu Investimentos parser currently extracts and organizes:
+
+- source PDF metadata, broker metadata, and customer metadata available in the note text;
+- one or more negotiation notes and sheets/pages grouped by note number;
+- note number, sheet number, trade date, settlement date, note type, and PDF pages used by each note;
+- own-layout `BOVESPA` spot operation rows with title, asset, observation, quantity, price, total, side, and debit/credit;
+- business summary values and financial summary values, including settlement fee, emoluments, registration fee, IRRF, net operations value, and net settlement.
+
+Supported operation patterns currently include complete spot rows observed in the Nu Investimentos/Nubank Investimentos proprietary note layout.
+
+## SINACOR Parser Capabilities
+
+The SINACOR parser currently extracts and organizes:
+
+- source PDF metadata and the broker legal name from the SINACOR/B3 note header;
+- `broker.name` as `SINACOR`, with `broker.legal_name` preserving the institution that issued the note;
+- customer metadata available in the note text;
+- one or more negotiation notes and sheets/pages grouped by note number;
+- complete `B3 RV LISTADO` spot operation rows with title, asset, observation, quantity, price, total, side, and debit/credit;
+- business summary values and financial summary values, including settlement fee, emoluments, registration fee, net operations value, and net settlement.
+
+For `--summary`, SINACOR files render the broker line as `Broker: SINACOR (<legal_name>)`. The parser is generic for the SINACOR model, with initial coverage validated against a Nu Investimentos sample.
 
 ## Output Modes
 

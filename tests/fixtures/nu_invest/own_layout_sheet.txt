@@ -1,0 +1,50 @@
+Contatos
+Nu Investimentos S.A. - Corretora de Títulos e Valores Mobiliários
+CNPJ: 00.000.000/0001-00 | www.nuinvest.example
+Rua Teste, nº 100, 2º andar
+00000-000 | São Paulo | SP | BR
+Data Pregão
+31/03/2026
+Número da nota
+700001
+Folha
+1 / 1
+Nome do Cliente
+CLIENTE TESTE
+CPF
+000.000.000-00
+Código do Cliente
+999999
+Endereço
+Rua Cliente Teste 123
+Cidade
+São Paulo
+UF
+SP
+CEP
+00000-000
+Mercado C/V Tipo de Mercado Especificação do Título Observação Quantidade Preço/Ajuste Valor/Ajuste D/C
+BOVESPA V VISTA TEST11 CI @ 10 R$ 12,34 R$ 123,40 C
+Resumo dos Negócios
+Debêntures R$ 0,00
+Vendas à vista R$ 123,40
+Compras à vista R$ 0,00
+Opções - Compras R$ 0,00
+Opções - Vendas R$ 0,00
+Operações a Termo R$ 0,00
+Valor das Operações com Títulos Públicos (V. Nom.) R$ 0,00
+Valor das Operações R$ 123,40
+Resumo Financeiro
+Clearing (CBLC)
+Valor Líquido das Operações R$ 123,40
+Taxa de Liquidação/CCP -R$ 0,03
+Taxa de Registro R$ 0,01
+Bolsa
+Taxa de Termo / Opções R$ 0,00
+Taxa A.N.A. R$ 0,00
+Emolumentos -R$ 0,02
+Taxa de Transferência de Ativos -R$ 0,00
+Corretagem/Despesas
+I.R.R.F. s/ operações. Base R$ 123,40 R$ 0,01
+Outras R$ 0,00
+Líquido para 02/04/2026 R$ 123,33
